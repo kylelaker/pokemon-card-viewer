@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Container } from "@cloudscape-design/components";
+import Header from "@cloudscape-design/components/header";
+import TopNavigation from "@cloudscape-design/components/top-navigation";
+import "@cloudscape-design/global-styles/index.css";
 import './App.css';
+import PokemonCards from './Cards';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <TopNavigation
+        identity={{
+          href: "#",
+          title: "Pokemon Cards"
+        }}
+        i18nStrings={{
+          searchIconAriaLabel: "Search",
+          searchDismissIconAriaLabel: "Close search",
+          overflowMenuTriggerText: "More",
+          overflowMenuTitleText: "All",
+          overflowMenuBackIconAriaLabel: "Back",
+          overflowMenuDismissIconAriaLabel: "Close menu"
+        }}
+      />
+      <Header variant="h1">All Pokemon Cards</Header>
+      <Container>
+        <PokemonCards/>
+      </Container>
     </div>
   );
 }
