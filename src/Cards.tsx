@@ -120,7 +120,7 @@ function Settings(props: SettingsModalProps) {
     });
     setIsOpen(false);
   };
-  const onPageSizeChange = (event: React.ChangeEvent<HTMLInputElement>, value: string) => {
+  const onPageSizeChange = (event: React.ChangeEvent<HTMLInputElement>, _value: string) => {
     switch (event.target.value) {
       case "9": setPageSize(9); break;
       case "30": setPageSize(30); break;

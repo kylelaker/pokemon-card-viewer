@@ -26,7 +26,8 @@
     "rules": {
       "semi": "off",
       "@typescript-eslint/semi": "error",
-      "@typescript-eslint/member-delimiter-style": "error"
+      "@typescript-eslint/member-delimiter-style": "error",
+      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "caughtErrorsIgnorePattern": "^_" }]
     },
     "settings": {
       "react": {
